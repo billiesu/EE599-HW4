@@ -30,7 +30,6 @@ public:
   
   void PrintVector(const vector<int> &input);
   vector<int> PreOrderTraverse();
-
   vector<int> levelTraversal();
   
 

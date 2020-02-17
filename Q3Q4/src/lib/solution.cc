@@ -7,6 +7,7 @@ BST::BST()
 
 BST::BST(const vector<int> &initial_values)
 {
+  root_ = nullptr;          //非常重要！！！！
   if (initial_values.size() == 0)
   {
     return;
@@ -74,6 +75,9 @@ void BST::find_helper(TreeNode *root, int key, int &res){
 }
 
 bool BST::erase(int key){
+  if(root_ == nullptr){
+    return false;
+  }
   int res = 0; 
   find_helper(root_, key, res);
   if(!res){
